@@ -7,18 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68A1EE5E2B5017730017E74A /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A1EE5D2B5017720017E74A /* LogoView.swift */; };
+		68A1EE632B5038540017E74A /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A1EE622B5038540017E74A /* SplashScreenView.swift */; };
 		68AD16F32B445E1D00B200BE /* HamiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD16F22B445E1D00B200BE /* HamiApp.swift */; };
 		68AD16F52B445E1D00B200BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD16F42B445E1D00B200BE /* ContentView.swift */; };
 		68AD16F72B445E2500B200BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68AD16F62B445E2500B200BE /* Assets.xcassets */; };
 		68AD16FA2B445E2500B200BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68AD16F92B445E2500B200BE /* Preview Assets.xcassets */; };
+		68AD17062B44620E00B200BE /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD17052B44620E00B200BE /* DataController.swift */; };
+		68AD17092B470AE900B200BE /* PersonsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68AD17072B470AE900B200BE /* PersonsModel.xcdatamodeld */; };
+		68AD170D2B472C4800B200BE /* AddPersonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD170C2B472C4800B200BE /* AddPersonsView.swift */; };
+		68AD170F2B47350A00B200BE /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD170E2B47350900B200BE /* TimeFormatting.swift */; };
+		68AD17112B47467700B200BE /* EditPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD17102B47467700B200BE /* EditPersonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68A1EE5D2B5017720017E74A /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		68A1EE622B5038540017E74A /* SplashScreenView.swift */ = {isa = PBXFileReference; indentWidth = 50; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; tabWidth = 30; };
 		68AD16EF2B445E1D00B200BE /* Hami.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hami.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AD16F22B445E1D00B200BE /* HamiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamiApp.swift; sourceTree = "<group>"; };
 		68AD16F42B445E1D00B200BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		68AD16F62B445E2500B200BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68AD16F92B445E2500B200BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		68AD17052B44620E00B200BE /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		68AD17082B470AE900B200BE /* PersonsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersonsModel.xcdatamodel; sourceTree = "<group>"; };
+		68AD170C2B472C4800B200BE /* AddPersonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonsView.swift; sourceTree = "<group>"; };
+		68AD170E2B47350900B200BE /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
+		68AD17102B47467700B200BE /* EditPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68A1EE5C2B5017300017E74A /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				68A1EE5D2B5017720017E74A /* LogoView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		68A1EE612B50383C0017E74A /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				68A1EE622B5038540017E74A /* SplashScreenView.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
 		68AD16E62B445E1C00B200BE = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +82,10 @@
 			isa = PBXGroup;
 			children = (
 				68AD16F22B445E1D00B200BE /* HamiApp.swift */,
-				68AD16F42B445E1D00B200BE /* ContentView.swift */,
+				68A1EE612B50383C0017E74A /* SplashScreen */,
+				68AD170B2B472BC700B200BE /* Helpers */,
+				68AD170A2B472B9300B200BE /* Views */,
+				68AD17002B445E7100B200BE /* DataModel */,
 				68AD16F62B445E2500B200BE /* Assets.xcassets */,
 				68AD16F82B445E2500B200BE /* Preview Content */,
 			);
@@ -65,6 +98,34 @@
 				68AD16F92B445E2500B200BE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		68AD17002B445E7100B200BE /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				68AD17072B470AE900B200BE /* PersonsModel.xcdatamodeld */,
+				68AD17052B44620E00B200BE /* DataController.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		68AD170A2B472B9300B200BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				68AD16F42B445E1D00B200BE /* ContentView.swift */,
+				68AD170C2B472C4800B200BE /* AddPersonsView.swift */,
+				68AD17102B47467700B200BE /* EditPersonView.swift */,
+				68A1EE5C2B5017300017E74A /* Header */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		68AD170B2B472BC700B200BE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				68AD170E2B47350900B200BE /* TimeFormatting.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +198,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68AD17112B47467700B200BE /* EditPersonView.swift in Sources */,
+				68AD17092B470AE900B200BE /* PersonsModel.xcdatamodeld in Sources */,
+				68A1EE632B5038540017E74A /* SplashScreenView.swift in Sources */,
+				68AD17062B44620E00B200BE /* DataController.swift in Sources */,
 				68AD16F52B445E1D00B200BE /* ContentView.swift in Sources */,
 				68AD16F32B445E1D00B200BE /* HamiApp.swift in Sources */,
+				68A1EE5E2B5017730017E74A /* LogoView.swift in Sources */,
+				68AD170D2B472C4800B200BE /* AddPersonsView.swift in Sources */,
+				68AD170F2B47350A00B200BE /* TimeFormatting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hami/Preview Content\"";
+				DEVELOPMENT_TEAM = 327HDP4J36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hami/Preview Content\"";
+				DEVELOPMENT_TEAM = 327HDP4J36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -342,6 +412,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		68AD17072B470AE900B200BE /* PersonsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				68AD17082B470AE900B200BE /* PersonsModel.xcdatamodel */,
+			);
+			currentVersion = 68AD17082B470AE900B200BE /* PersonsModel.xcdatamodel */;
+			path = PersonsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 68AD16E72B445E1C00B200BE /* Project object */;
 }

@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct HamiApp: App {
+    
+    @StateObject private var datacontroller = DataController()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
+                .environment(\.managedObjectContext, datacontroller.container.viewContext)
         }
     }
 }
