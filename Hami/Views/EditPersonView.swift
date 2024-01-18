@@ -49,7 +49,7 @@ struct EditPersonView: View {
                     }
                     .frame(width: 100, height: 30, alignment: .center)
                 }
-                .padding(.horizontal, 100.0)
+                .padding(.horizontal, 120.0)
                     
                 VStack {
                     HStack {
@@ -69,7 +69,7 @@ struct EditPersonView: View {
                         .padding(.horizontal, 100)
                     }
                 }
-                .padding(.horizontal, 70.0)
+                .padding(.horizontal, 120.0)
             }
         }
     }
