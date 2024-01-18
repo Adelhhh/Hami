@@ -22,7 +22,6 @@ struct AddPersonsView: View {
         Form {
             Section {
                 VStack {
-                    
                     TextField("Write a name here", text: $name)
                         .padding(20.0)
                         .overlay(RoundedRectangle(cornerRadius: 10)
@@ -33,7 +32,6 @@ struct AddPersonsView: View {
                 
                 VStack {
                     HStack {
-                        
                         Text(String(amounts))
                             .font(.largeTitle)
                             .fontWeight(.bold)
@@ -49,23 +47,26 @@ struct AddPersonsView: View {
                     }
                     .frame(width: 100, height: 30, alignment: .center)
                     
-                    
+                }
+                .padding(.horizontal, 100.0)
+
+                VStack {
                     HStack {
                         Button(action: {
                             DataController().addPersons(name: name, amounts: amounts, context: managedObjContext)
                             dismiss()
                         }, label: {
                             Text("Submit")
-                                .font(.title2)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color.white)
                         })
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                        .frame(width: 200, height: 40)
+                        .background(Color(.green).cornerRadius(8.0))
+                        .padding([.top, .bottom], 10.0)
+                        .padding(.horizontal, 100)
                     }
-                    .frame(width: 200, height: 40)
-                    .background(Color(.green).cornerRadius(8.0))
-                    .padding(.vertical, 20.0)
-                    
-                }
+                }            
                 .padding(.horizontal, 70.0)
             }
         }

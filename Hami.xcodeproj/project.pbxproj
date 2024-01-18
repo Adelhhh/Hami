@@ -82,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				68AD16F22B445E1D00B200BE /* HamiApp.swift */,
+				68A1EE5C2B5017300017E74A /* Header */,
 				68A1EE612B50383C0017E74A /* SplashScreen */,
 				68AD170B2B472BC700B200BE /* Helpers */,
 				68AD170A2B472B9300B200BE /* Views */,
@@ -115,7 +116,6 @@
 				68AD16F42B445E1D00B200BE /* ContentView.swift */,
 				68AD170C2B472C4800B200BE /* AddPersonsView.swift */,
 				68AD17102B47467700B200BE /* EditPersonView.swift */,
-				68A1EE5C2B5017300017E74A /* Header */,
 			);
 			path = Views;
 			sourceTree = "<group>";
