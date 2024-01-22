@@ -58,7 +58,7 @@ struct AddPersonsView: View {
                         }, label: {
                             Text("Submit")
                         })
-                        .font(.title)
+                        .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 40)
