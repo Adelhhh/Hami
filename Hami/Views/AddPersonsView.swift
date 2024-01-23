@@ -62,7 +62,7 @@ struct AddPersonsView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 40)
-                        .background(Color(.green).cornerRadius(8.0))
+                        .background(Color(.blue).cornerRadius(8.0))
                         .padding([.top, .bottom], 10.0)
                         .padding(.horizontal, 100)
                     }
