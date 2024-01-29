@@ -16,6 +16,7 @@ struct EditPersonView: View {
     
     @State private var name = ""
     @State private var amounts: Double = 0
+    @State private var comment = ""
     
     var body: some View {
         Form {
@@ -50,11 +51,22 @@ struct EditPersonView: View {
                     .frame(width: 100, height: 30, alignment: .center)
                 }
                 .padding(.horizontal, 120.0)
+                
+                TextField("\(persons.comment!)", text: $comment)
+                    .onAppear {
+                        name = persons.name!
+                        amounts = persons.amounts
+                        comment = persons.comment!
+                    }
+                    .frame(width: 300, height: 30)
+                    .padding(20.0)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.gray, lineWidth: 1))
                     
                 VStack {
                     HStack {
                         Button(action: {
-                            DataController().editPersons(persons: persons, name: name, amounts: amounts, context: managedObjContext)
+                            DataController().editPersons(persons: persons, name: name, comment: comment, amounts: amounts, context: managedObjContext)
                             dismiss()
                         }, label: {
                             Text("Submit")

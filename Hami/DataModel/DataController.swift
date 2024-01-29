@@ -28,20 +28,22 @@ class DataController: ObservableObject {
         }
     }
     
-    func addPersons(name: String, amounts: Double, context: NSManagedObjectContext) {
+    func addPersons(name: String, amounts: Double, comment: String, context: NSManagedObjectContext) {
         let persons = Persons(context: context)
         persons.id = UUID()
         persons.date = Date()
         persons.name = name
         persons.amounts = amounts
+        persons.comment = comment
         
         save(context: context)
     }
     
-    func editPersons(persons: Persons, name: String, amounts: Double, context: NSManagedObjectContext) {
+    func editPersons(persons: Persons, name: String, comment: String, amounts: Double, context: NSManagedObjectContext) {
         persons.date = Date()
         persons.name = name
         persons.amounts = amounts
+        persons.comment = comment
         
         save(context: context)
     }

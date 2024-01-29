@@ -14,6 +14,7 @@ struct AddPersonsView: View {
     
     @State private var name = ""
     @State private var amounts: Double = 0
+    @State private var comment = ""
     
     var body: some View {
         
@@ -49,12 +50,22 @@ struct AddPersonsView: View {
                     
                 }
                 .padding(.horizontal, 120.0)
+                
+                VStack {
+                    TextField("Comment...", text: $comment)
+                        .padding(20.0)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.gray, lineWidth: 1))
+                }
+                .frame(width: 300, height: 30)
+                .padding()
 
                 VStack {
                     HStack {
                         Button(action: {
-                            DataController().addPersons(name: name, amounts: amounts, context: managedObjContext)
+                            DataController().addPersons(name: name, amounts: amounts, comment: comment, context: managedObjContext)
                             dismiss()
+                            
                         }, label: {
                             Text("Submit")
                         })

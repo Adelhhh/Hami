@@ -53,8 +53,15 @@ struct ContentView: View {
                                     }
                                     
                                     Text("\(Int(person.amounts))") + Text("      ").foregroundColor(.blue)
+                                        .bold()
+                                    
+                                    Text(person.comment!)
+                                        .fontWeight(.medium)
+                                        .foregroundColor(Color.gray)
+                                    
                                 }
                                 
+                                Spacer()
                                 Spacer()
                                 
                                 if person.date != nil {
@@ -68,10 +75,17 @@ struct ContentView: View {
                                 }
                             }
                         }
+                        .padding()
+                        .frame(width: 350.0, height: 100.0)
+
                     }
                     .onDelete(perform: deletePerson)
+                    .overlay(RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 1))
                 }
                 .listStyle(.plain)
+
+                
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
