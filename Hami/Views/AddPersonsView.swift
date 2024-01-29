@@ -13,7 +13,7 @@ struct AddPersonsView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var name = ""
-    @State private var amounts: Double = 0
+    @State private var amounts: Int = 0
     @State private var comment = ""
     
     var body: some View {
@@ -33,9 +33,11 @@ struct AddPersonsView: View {
                 
                 VStack {
                     HStack {
+                        
                         Text(String(amounts))
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
+                            .font(.title)
+                            .fontWeight(.bold) 
+                        
                         
                         /* Text("kr")
                          .font(.title2)
@@ -44,7 +46,7 @@ struct AddPersonsView: View {
                     }
                     
                     HStack {
-                        Stepper("", value: $amounts, in: 0...10000, step: 10)
+                        Stepper("", value: $amounts, in: 0...10000, step: 5)
                     }
                     .frame(width: 100, height: 30, alignment: .center)
                     

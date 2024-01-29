@@ -15,7 +15,7 @@ struct EditPersonView: View {
     var persons: FetchedResults<Persons>.Element
     
     @State private var name = ""
-    @State private var amounts: Double = 0
+    @State private var amounts: Int = 0
     @State private var comment = ""
     
     var body: some View {
@@ -25,7 +25,7 @@ struct EditPersonView: View {
                     TextField("\(persons.name!)", text: $name)
                         .onAppear {
                             name = persons.name!
-                            amounts = persons.amounts
+                            amounts = Int(persons.amounts)
                         }
                         .padding(20.0)
                         .overlay(RoundedRectangle(cornerRadius: 10)
@@ -46,7 +46,7 @@ struct EditPersonView: View {
                     }
                     
                     HStack {
-                        Stepper("", value: $amounts, in: 0...10000, step: 10)
+                        Stepper("", value: $amounts, in: 0...10000, step: 5)
                     }
                     .frame(width: 100, height: 30, alignment: .center)
                 }
@@ -55,7 +55,7 @@ struct EditPersonView: View {
                 TextField("\(persons.comment!)", text: $comment)
                     .onAppear {
                         name = persons.name!
-                        amounts = persons.amounts
+                        amounts = Int(persons.amounts)
                         comment = persons.comment!
                     }
                     .frame(width: 300, height: 30)

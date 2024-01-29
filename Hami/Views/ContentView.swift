@@ -14,7 +14,7 @@ struct ContentView: View {
         var amountsToday: Double = 0
         for item in persons {
             if Calendar.current.isDateInToday(item.date!) {
-                amountsToday += item.amounts
+                amountsToday += Double(item.amounts)
             }
         }
         return amountsToday
@@ -105,7 +105,7 @@ struct ContentView: View {
             }
             .padding(.top, 5.0)
             .padding(.horizontal, 20.0)
-            
+
         }
         .navigationViewStyle(.stack)
         
